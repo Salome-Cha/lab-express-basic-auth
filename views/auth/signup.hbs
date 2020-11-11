@@ -1,0 +1,21 @@
+<h2>Signup to the app</h2>
+
+<form action="/signup" method="POST">
+  <label>
+    Username
+    <input type="text" name="username" placeholder="Your username" required>
+  </label>
+
+  <label>
+   Password
+    <input type="password" name="password" placeholder="Your password" required>
+  </label>
+
+
+   <button type="submit" class="button"> Create account </button>
+
+{{#if errorMessage}}
+<div class="error"> {{errorMessage}}</div>
+{{/if}}
+
+</form>

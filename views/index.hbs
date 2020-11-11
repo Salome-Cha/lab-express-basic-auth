@@ -1,2 +1,20 @@
 <h1>{{title}}</h1>
-<p>Welcome to {{title}}</p>
+<p>
+    Here is an application to learn basic authentication.
+</p>
+
+{{#if user}}
+
+    Welcome, {{user.username}},
+
+    <form method="POST" action="/logout">
+    <button type="submit" class="button">Logout </button>
+    </form>
+
+    <a href="/private/private" class="button"> Private page </a>
+    <br>
+    <a href="/private/main" class="button"> Main Private page </a>
+
+    {{else}}
+    <a href="/login" class="button"> Login </a>  
+{{/if}}
